@@ -9,5 +9,7 @@ Run get_data.py from each folder containing a top.txt and a dstat.log
 
 # RUN THESE TO SAVE EVALUATION DATA TO FILE:
 python3 start.py # Start program
+
 dstat --time --cpu --mem  --disk -power --load --lock  --top-cpu  | grep --line-buffered python3 > tmp/dstat.log 
+
 top -b | grep --line-buffered "python3" > tmp/top.txt 
